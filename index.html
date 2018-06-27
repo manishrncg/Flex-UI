@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<script src="js/jquery.min.js" defer="true"></script>
+	<script type="text/javascript" src="js/login.js" defer="true"></script>
+</head>
+<body>
+	<div class="display-center">
+		<span class="tabs">
+			<h2 class="signIn active">Sign in</h2>
+			<h2 class="register">Register</h2>
+		</span>
+		<form name="login" id="login-form" method="post" action="profile.html">
+			<input type="email" name="user_email" class="user_email curve" placeholder="Email id" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required>
+			<button type="button" class="btn next-btn curve">Next</button>
+			<input type="password" name="password" class="password curve hide" placeholder="Password">
+			<button type="submit" class="btn login-btn hide">Sign in</button>
+		</form>
+
+		<form name="registration" id="registration-form" method="post" class="hide-translate">
+			<p class="margin0 margin-top-min">Name</p>
+			<span class="d-flex">
+				<input type="text" class="curve flex-1" name="first_name" id="first_name"  pattern="[A-Za-z-0-9]+" placeholder="First name" required>
+				<input type="text" class="curve flex-1" name="last_name" id="last_name"  pattern="[A-Za-z-0-9]+" placeholder="Last name" required>
+			</span>
+			<p class="margin0 margin-top-min">Email id</p>
+			<input type="email" name="user_email" class="user_email_reg curve" placeholder="Email id" pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$" required>
+			<p class="margin0 margin-top-min">Mobile no.</p>
+			<input type="text" name="user_mobile" class="user_mobile_reg curve" placeholder="Mobile no." pattern="[0-9]+" required>
+			<p class="margin0 margin-top-min">Permanant Address</p>
+			<textarea rows="3" name="address-1" class="curve" required></textarea>
+			<button type="button" class="btn temp-add">Add Temporary Address</button>
+			<span class="temp-address d-flex hide">
+				<p class="margin0 margin-top-min">Temporary Address</p>
+				<textarea rows="3" name="address-2" class="curve"></textarea>				
+			</span>
+			<p class="margin0 margin-top-min">OTP</p>
+			<span class="d-flex">
+				<input type="text" class="curve otp" name="otp-1" id="1"  pattern="[0-9]+" required>
+				<input type="text" class="curve otp" name="otp-2" id="2"  pattern="[0-9]+" required>
+				<input type="text" class="curve otp" name="otp-3" id="3"  pattern="[0-9]+" required>
+				<input type="text" class="curve otp" name="otp-4" id="4"  pattern="[0-9]+" required>
+			</span>
+			<button type="submit" class="btn registerSubmit">Submit</button>
+			<button type="reset" class="btn reset-btn">Reset</button>
+		</form>
+	</div>
+
+	<div class="fixed-cont hide">
+		<h3>Virtual keyboard</h3>
+		<div class="virtual-keyboard">
+			<span class="key flex1">1</span>
+			<span class="key flex1">2</span>
+			<span class="key flex1">3</span>
+			<span class="key flex1">4</span>
+			<span class="key flex1">5</span>
+			<span class="key flex1">6</span>
+			<span class="key flex1">7</span>
+			<span class="key flex1">8</span>
+			<span class="key flex1">9</span>
+			<span class="key flex1">0</span>
+		</div>	
+	</div>
+	
+</body>
+</html>
